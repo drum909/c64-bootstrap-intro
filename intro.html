@@ -1,0 +1,145 @@
+<html>
+
+	<head>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<style>
+
+@-webkit-keyframes typing {
+    from { width: 0 }
+    to { width: 30% }
+}
+
+@-moz-keyframes typing {
+    from { width: 0 }
+    to { width: 30% }y
+}
+
+@-webkit-keyframes blink-caret {
+    from, to { border-color: #A396ff }
+    50% { border-color: transparent }
+}
+
+@-moz-keyframes blink-caret {
+    from, to { border-color: #A396FF }
+    50% { border-color: transparent }
+}
+
+.typing { 
+    text-align:left;
+    font-size:1em;
+    max-width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    border-right: 1em solid transparent;
+    padding-right:1em;
+    top: 0;
+    padding-top: 0;
+
+    -webkit-animation: typing 5s steps(32, end), /* # of steps = # of characters */
+    blink-caret .5s step-end 10; /*infinite;*/
+    -moz-animation: typing 5s steps(32, end), /* # of steps = # of characters */
+    blink-caret .5s step-end 10; /*infinite;*/
+}
+
+#run {
+    text-align:left;
+    font-size:1em;
+    max-width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    border-right: 1em solid transparent;
+    padding-right:1em;
+    top: 0;
+    padding-top: 0;
+
+    -webkit-animation-delay: 8500s
+    -moz-animation-delay: 8500s;
+    -webkit-animation: blink-caret .5s step-end 10; /*infinite;*/
+    -moz-animation: blink-caret .5s step-end 10; /*infinite;*/
+}
+		
+
+@font-face {
+
+
+
+font-family: c64;
+
+
+
+src: local('c64'), url('C64.ttf') format('truetype');
+
+
+
+}
+
+
+
+html {
+
+
+
+ height: 100%;
+
+
+
+}
+
+table { background-color:  #4342E6; }
+
+body {
+margin: auto;
+    height: 100%;
+    width: 90%;
+padding: 0;
+font-family: c64, courier, monospaced;
+color: #A6A1FF;
+background-color: #A6A1FF;
+position: relative;
+font-size: 14px;
+line-height: 1.7em;
+background-size: 100%;
+min-height: 100%;
+}				/* eigenes CSS */
+		
+		</style>
+
+	</head>
+
+
+
+<body>
+<center>
+<table background-color="#4342E6" height="100%" width="80%">
+
+	<tr  background-color="#4342E6"><td style="vertical-align:top" background-color="#4342E6"><br><br>
+	<p align="center" class="c64_top" align="top">**** COMMODORE 64 BASIC V2 ****</p>
+    <p align="center" class="c64_top">64 K RAM SYSTEM&nbsp;&nbsp;38911 BASIC BYTES FREE</p>
+    <p>READY.</p>
+     <p class="typing">LOAD "EVORAIT.COM",8,1</p>
+    	<p class="">
+            <span id="searching">SEARCHING FOR EVORAIT.COM</span><br />
+            <span id="loading">LOADING...</span><br />
+            <span id="ready">READY.</span><br />
+            <span id="run">RUN</span><br />
+        </p>
+
+        <script>
+            $(document).ready(function(){
+                $("#searching").hide().delay(15000).show(1);
+                $("#loading").hide().delay(16500).show(1);
+                $("#ready").hide().delay(18000).show(1);
+                $("#run").hide().delay(18500).show("slow");
+            });
+        </script>
+
+        	</td>
+        </tr>
+       </table>
+     </center>
+</body>
+</html>
